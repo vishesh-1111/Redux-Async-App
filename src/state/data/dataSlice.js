@@ -1,13 +1,13 @@
 
 import { createSlice } from "@reduxjs/toolkit";
-// Initial state
+
 const initialState = {
   loading: false,
   data: [],
   error: null,
 };
 
-// Redux slice
+const apiUrl ="https://jsonplaceholder.typicode.com/posts"
 const dataSlice = createSlice({
   name: "data",
   initialState,
@@ -27,14 +27,13 @@ const dataSlice = createSlice({
   },
 });
 
-// Export actions
+
 export const { fetchDataRequest, fetchDataSuccess, fetchDataFailure } = dataSlice.actions;
 
-// Thunk function to fetch data
 export const fetchPosts = () => async (dispatch) => {
   dispatch(fetchDataRequest());
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const response = await fetch(apiUrl);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

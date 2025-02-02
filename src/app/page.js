@@ -21,7 +21,7 @@ export default function App(){
   
  
 
-   if(!data){
+   if(loading){
     return(
       <div>
         Loading...

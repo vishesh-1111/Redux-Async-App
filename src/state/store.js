@@ -1,13 +1,12 @@
 
 import { configureStore } from "@reduxjs/toolkit";
-import { thunk } from "redux-thunk";
-import dataReducer from "./data/dataSlice"; // Import reducer
+
+import dataReducer from "./data/dataSlice";
 
 const store = configureStore({
   reducer: {
-    data: dataReducer, // Add the reducer
+    data: dataReducer, 
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
 
 export default store;

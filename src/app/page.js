@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useDispatch,useSelector } from "react-redux";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -36,10 +36,10 @@ export default function App(){
        aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="right">userId</TableCell>
-            <TableCell align="right">id</TableCell>
-            <TableCell align="right">title</TableCell>
-            <TableCell align="right">body</TableCell>
+            <TableCell align="left">userId</TableCell>
+            <TableCell align="left">id</TableCell>
+            <TableCell align="left">title</TableCell>
+            <TableCell align="left">body</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -49,10 +49,10 @@ export default function App(){
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
            
-              <TableCell align="right">{row.userId}</TableCell>
-              <TableCell align="right">{row.id}</TableCell>
-              <TableCell align="right">{row.title}</TableCell>
-              <TableCell align="right">{row.title}</TableCell>
+              <TableCell align="left">{row.userId}</TableCell>
+              <TableCell align="left">{row.id}</TableCell>
+              <TableCell align="left">{row.title}</TableCell>
+              <TableCell align="left">{row.title}</TableCell>
             </TableRow>
           ))}
         </TableBody>
